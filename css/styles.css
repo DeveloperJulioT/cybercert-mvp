@@ -106,12 +106,24 @@ a:hover { text-decoration: underline; }
     color: white;
 }
 
+.brand-title {
+    text-align: center;
+    color: #fbbf24; /* Amarillo para resaltar sobre el morado */
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo Login ajustado */
 .login-box h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 1.1rem; 
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #e9d5ff; /* Morado claro para diferenciarlo del título */
+    text-transform: uppercase;
 }
 
 /* Campos de entrada con Íconos */
