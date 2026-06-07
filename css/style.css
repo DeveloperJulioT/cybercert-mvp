@@ -1,0 +1,138 @@
+/* Variables y Configuración Base */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Tipografía y Botones */
+a { color: var(--accent-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary { background-color: var(--accent-color); color: white; }
+.btn-primary:hover { background-color: var(--accent-hover); }
+.btn-secondary { background-color: transparent; border: 1px solid var(--text-secondary); color: var(--text-primary); }
+.btn-secondary:hover { background-color: rgba(255, 255, 255, 0.1); }
+.btn-disabled { background-color: #475569; cursor: not-allowed; opacity: 0.7; }
+.btn-disabled:hover { background-color: #475569; }
+
+/* Login Estilos */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header { text-align: center; margin-bottom: 30px; }
+.login-header h1 { font-size: 1.5rem; margin-bottom: 5px; color: var(--accent-color);}
+.login-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; }
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: white;
+    outline: none;
+}
+.form-group input:focus { border-color: var(--accent-color); }
+
+.error-text { color: var(--error-color); font-size: 0.8rem; display: block; margin-top: 5px;}
+.register-link { text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary); }
+
+/* Catálogo Estilos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #334155;
+}
+.nav-brand { font-weight: bold; font-size: 1.2rem; color: var(--accent-color); }
+.nav-user { display: flex; align-items: center; gap: 15px; }
+.nav-user .btn-secondary { width: auto; padding: 5px 15px; font-size: 0.8rem; }
+
+.catalog-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.catalog-header { text-align: center; margin-bottom: 40px; }
+.catalog-header h2 { font-size: 2rem; margin-bottom: 10px; }
+.catalog-header p { color: var(--text-secondary); }
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #334155;
+}
+.course-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+
+.card-header {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-header.basic { background-color: var(--success-color); color: #0f172a; }
+.card-header.offensive { background-color: var(--error-color); color: white; }
+.card-header.defensive { background-color: var(--accent-color); color: white; }
+
+.card-body { padding: 25px; }
+.card-body h3 { margin-bottom: 15px; font-size: 1.3rem; }
+.card-body p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 25px; height: 80px; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .catalog-header h2 { font-size: 1.5rem; }
+}
