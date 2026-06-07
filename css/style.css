@@ -46,41 +46,196 @@ a:hover { text-decoration: underline; }
 
 /* Login Estilos */
 .login-body {
+    /* Fondo morado principal de la página */
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     padding: 20px;
+    margin: 0;
 }
 
-.login-container {
-    background-color: var(--card-bg);
+.split-container {
+    display: flex;
+    background-color: #f4f5f9; /* Fondo gris claro interior */
+    width: 950px;
+    max-width: 100%;
+    min-height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ilustración */
+.split-left {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* Aquí puedes poner de fondo las ondas grises de la imagen si consigues un patrón */
+    background-image: radial-gradient(circle at top left, #ffffff 0%, #f4f5f9 100%);
+}
+
+.split-left img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Contenedor del Formulario */
+.split-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 400px;
+    background-color: #f4f5f9;
 }
 
-.login-header { text-align: center; margin-bottom: 30px; }
-.login-header h1 { font-size: 1.5rem; margin-bottom: 5px; color: var(--accent-color);}
-.login-header p { color: var(--text-secondary); font-size: 0.9rem; }
-
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; }
-.form-group input {
+.login-box {
+    background: linear-gradient(180deg, #9333ea 0%, #7e22ce 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
     width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #334155;
-    background-color: #0f172a;
+    max-width: 350px;
+    box-shadow: 0 15px 25px rgba(126, 34, 206, 0.3);
     color: white;
-    outline: none;
 }
-.form-group input:focus { border-color: var(--accent-color); }
 
-.error-text { color: var(--error-color); font-size: 0.8rem; display: block; margin-top: 5px;}
-.register-link { text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary); }
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Campos de entrada con Íconos */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fbbf24; /* Color amarillo para los íconos */
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    background-color: white;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group input::placeholder {
+    color: #a0aec0;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5); /* Resplandor amarillo al enfocar */
+}
+
+/* Fila de recordar y olvidar contraseña */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    margin-bottom: 30px;
+}
+
+.options-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #e9d5ff;
+}
+
+.options-row input[type="checkbox"] {
+    accent-color: #fbbf24;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #e9d5ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover {
+    color: white;
+}
+
+/* Botón amarillo */
+.btn-login {
+    width: 100%;
+    background-color: #fbbf24;
+    color: white;
+    font-weight: 800;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.1s;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background-color: #f59e0b;
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+/* Enlace inferior de registro */
+.signup-text {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.signup-text a {
+    color: #4c1d95;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes Responsivos para el Login */
+@media (max-width: 850px) {
+    .split-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .split-left {
+        display: none; /* Ocultamos la ilustración en móviles para priorizar el login */
+    }
+    
+    .split-right {
+        padding: 30px 20px;
+    }
+}
 
 /* Catálogo Estilos */
 .navbar {
