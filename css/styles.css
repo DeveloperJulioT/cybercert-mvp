@@ -47,7 +47,7 @@ a:hover { text-decoration: underline; }
 /* Login Estilos */
 .login-body {
     /* Fondo morado principal de la página */
-    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); 
+    background: linear-gradient(135deg, #334155 0%, #5b21b6 100%); 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ a:hover { text-decoration: underline; }
     display: flex;
     justify-content: flex-end; /* Empuja la imagen hacia el centro */
     align-items: stretch; /* Permite que la imagen tome la misma altura */
-    padding: 40px 20px 40px 40px; /* Espaciado ajustado */
+    padding: 80px 20px 40px 40px; /* Espaciado ajustado */
     background: none; /* Quitamos cualquier fondo anterior */
 }
 
@@ -83,7 +83,7 @@ a:hover { text-decoration: underline; }
 .split-left img {
     width: 100%;
     max-width: 350px; /* Exactamente el mismo ancho que el formulario morado */
-    height: 100%; /* Toma la altura disponible */
+    height:83%; /* Toma la altura disponible */
     object-fit: cover; /* Ajusta la imagen sin deformarla (hace un recorte perfecto) */
     border-radius: 20px; /* Bordes redondeados idénticos a los del formulario */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para darle relieve */
@@ -102,7 +102,7 @@ a:hover { text-decoration: underline; }
 
 /* Asegúrate de que tu .login-box actual se vea así (mantén lo que ya tenías si es igual) */
 .login-box {
-    background: linear-gradient(180deg, #9333ea 0%, #7e22ce 100%);
+    background: linear-gradient(180deg, #334155 0%, #7e22ce 100%);
     border-radius: 20px; /* Bordes redondeados del formulario */
     padding: 40px 30px;
     width: 100%;
