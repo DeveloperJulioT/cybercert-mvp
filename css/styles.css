@@ -56,52 +56,57 @@ a:hover { text-decoration: underline; }
     margin: 0;
 }
 
+/* Contenedor principal blanco con bordes redondeados */
 .split-container {
     display: flex;
-    background-color: #f4f5f9; /* Fondo gris claro interior */
-    width: 950px;
+    background-color: #ffffff; /* Blanco puro como en tu referencia */
+    width: 900px; /* Ajustado para mantener la simetría */
     max-width: 100%;
-    min-height: 550px;
-    border-radius: 20px;
+    min-height: 520px;
+    border-radius: 20px; /* Bordes semi redondos del recuadro blanco */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     position: relative;
 }
 
-/* Ilustración */
+/* Columna Izquierda (Imagen) */
 .split-left {
-    flex: 1.2;
+    flex: 1; /* Misma proporción que la columna derecha */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    /* Aquí puedes poner de fondo las ondas grises de la imagen si consigues un patrón */
-    background-image: radial-gradient(circle at top left, #ffffff 0%, #f4f5f9 100%);
+    justify-content: flex-end; /* Empuja la imagen hacia el centro */
+    align-items: stretch; /* Permite que la imagen tome la misma altura */
+    padding: 40px 20px 40px 40px; /* Espaciado ajustado */
+    background: none; /* Quitamos cualquier fondo anterior */
 }
 
+/* Propiedades exactas para igualar la imagen al formulario */
 .split-left img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 350px; /* Exactamente el mismo ancho que el formulario morado */
+    height: 100%; /* Toma la altura disponible */
+    object-fit: cover; /* Ajusta la imagen sin deformarla (hace un recorte perfecto) */
+    border-radius: 20px; /* Bordes redondeados idénticos a los del formulario */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para darle relieve */
 }
 
-/* Contenedor del Formulario */
+/* Columna Derecha (Formulario) */
 .split-right {
-    flex: 1;
+    flex: 1; /* Misma proporción que la columna izquierda */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background-color: #f4f5f9;
+    align-items: flex-start; /* Empuja el formulario hacia el centro */
+    padding: 40px 40px 40px 20px; /* Espaciado ajustado */
+    background-color: #ffffff; /* Fondo blanco */
 }
 
+/* Asegúrate de que tu .login-box actual se vea así (mantén lo que ya tenías si es igual) */
 .login-box {
     background: linear-gradient(180deg, #9333ea 0%, #7e22ce 100%);
-    border-radius: 20px;
+    border-radius: 20px; /* Bordes redondeados del formulario */
     padding: 40px 30px;
     width: 100%;
-    max-width: 350px;
+    max-width: 350px; /* El mismo ancho que le pusimos a la imagen arriba */
     box-shadow: 0 15px 25px rgba(126, 34, 206, 0.3);
     color: white;
 }
