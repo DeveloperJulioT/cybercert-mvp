@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - CyberCert Academy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">CyberCert Academy</div>
+        <div class="nav-user">
+            <span>Hola, Andrés</span>
+            <button id="logoutBtn" class="btn-secondary">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <main class="catalog-container">
+        <header class="catalog-header">
+            <h2>Rutas de Certificación</h2>
+            <p>Selecciona tu ruta y comienza a resolver retos técnicos.</p>
+        </header>
+
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="card-header basic">Nivel Básico</div>
+                <div class="card-body">
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p>Acceso al contenido teórico y práctico del primer nivel. Conceptos de redes, criptografía y políticas de seguridad.</p>
+                    <button class="btn-primary">Iniciar Ruta</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-header offensive">Nivel Ofensivo</div>
+                <div class="card-body">
+                    <h3>Offensive Security (Pentesting)</h3>
+                    <p>Aprende a identificar vulnerabilidades. Laboratorios prácticos de Red Team y explotación de sistemas.</p>
+                    <button class="btn-primary btn-disabled" disabled>Bloqueado</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-header defensive">Nivel Defensivo</div>
+                <div class="card-body">
+                    <h3>Defensive Security (Blue Team)</h3>
+                    <p>Especialízate en SOC. Monitoreo, análisis de tráfico con Wireshark y respuesta a incidentes (SAFE).</p>
+                    <button class="btn-primary btn-disabled" disabled>Bloqueado</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
