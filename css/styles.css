@@ -308,3 +308,153 @@ a:hover { text-decoration: underline; }
     .navbar { flex-direction: column; gap: 15px; }
     .catalog-header h2 { font-size: 1.5rem; }
 }
+
+/* =========================================
+   ESTILOS DEL MÓDULO DE APRENDIZAJE
+   ========================================= */
+.module-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 70px);
+    background-color: var(--bg-color);
+}
+
+/* Menú Lateral */
+.module-sidebar {
+    background-color: var(--card-bg);
+    border-right: 1px solid #334155;
+    padding: 20px 0;
+}
+
+.module-sidebar h3 {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.module-menu {
+    list-style: none;
+}
+
+.module-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: var(--text-primary);
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.module-menu li:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.module-menu li.active {
+    background-color: rgba(59, 130, 246, 0.2);
+    border-left: 4px solid var(--accent-color);
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.module-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Área de Contenido principal */
+.module-content {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.module-content h2 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.module-content p {
+    text-align: center;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+/* Elementos Multimedia y Laboratorio */
+.video-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #0f172a;
+    border: 2px dashed #334155;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--text-secondary);
+}
+
+.resource-links { margin-top: 20px; }
+.resource-links .btn-secondary { display: inline-block; width: auto; }
+
+.lab-terminal {
+    background-color: #000;
+    color: #0f0; /* Verde terminal */
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    border: 1px solid #333;
+    overflow-x: auto;
+}
+
+/* Examen */
+.exam-form {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid #334155;
+}
+
+.question-block {
+    margin-bottom: 25px;
+}
+
+.question-block p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.question-block label {
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.exam-result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result-pass { background-color: rgba(16, 185, 129, 0.2); color: var(--success-color); border: 1px solid var(--success-color); }
+.result-fail { background-color: rgba(239, 68, 68, 0.2); color: var(--error-color); border: 1px solid var(--error-color); }
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .module-layout { grid-template-columns: 1fr; }
+    .module-sidebar { border-right: none; border-bottom: 1px solid #334155; }
+    .module-content { padding: 20px; }
+}

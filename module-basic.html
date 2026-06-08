@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - CyberCert Academy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand" style="color: #fbbf24; font-weight: 800;">EduTech Platform</div>
+        <div class="nav-user">
+            <span><i class="fas fa-user-graduate"></i> Invitado</span>
+            <button class="btn-secondary" onclick="window.location.href='catalog.html'">Volver al Catálogo</button>
+        </div>
+    </nav>
+
+    <div class="module-layout">
+        <aside class="module-sidebar">
+            <h3>Contenido del Módulo</h3>
+            <ul class="module-menu">
+                <li class="active" onclick="showTab('teoria', this)"><i class="fas fa-book"></i> 1. Conceptos Básicos</li>
+                <li onclick="showTab('laboratorio', this)"><i class="fas fa-laptop-code"></i> 2. Laboratorio Práctico</li>
+                <li onclick="showTab('examen', this)"><i class="fas fa-file-signature"></i> 3. Examen Final</li>
+            </ul>
+        </aside>
+
+        <main class="module-content">
+            
+            <section id="teoria" class="tab-content active-tab">
+                <h2>Fundamentos de Ciberseguridad</h2>
+                <p>En esta sección aprenderás los conceptos fundamentales de la triada CIA (Confidencialidad, Integridad y Disponibilidad).</p>
+                <div class="video-container">
+                    <video width="100%" height="400" controls>
+                        <source src="assets/video/Ciberseguridad Basica Introducción a la Ciberseguridad  La triada CIA.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+                <div class="resource-links">
+                    <a href="#" class="btn-secondary"><i class="fas fa-file-pdf"></i> Descargar Guía PDF</a>
+                </div>
+            </section>
+
+            <section id="laboratorio" class="tab-content" style="display: none;">
+                <h2>Laboratorio 1: Análisis de Paquetes</h2>
+                <p>Instrucciones: Revisa el siguiente archivo PCAP simulado y encuentra la IP de origen del ataque.</p>
+                <div class="lab-terminal">
+                    <code>
+                        $ tcpdump -r traffic.pcap<br>
+                        reading from file traffic.pcap, link-type EN10MB (Ethernet)<br>
+                        10:05:01.123456 IP 192.168.1.100.12345 > 10.0.0.5.80: Flags [S], seq 123456789...<br>
+                        10:05:01.125000 IP 10.0.0.5.80 > 192.168.1.100.12345: Flags [S.], seq 987654321...<br>
+                        [ EOF ]
+                    </code>
+                </div>
+            </section>
+
+            <section id="examen" class="tab-content" style="display: none;">
+                <h2>Examen de Certificación</h2>
+                <p>Para aprobar y generar tu certificado, necesitas una calificación mínima del <strong>80%</strong>.</p>
+                
+                <form id="examForm" class="exam-form">
+                    <div class="question-block">
+                        <p><strong>1. ¿Qué pilar de la triada CIA garantiza que la información no sea alterada?</strong></p>
+                        <label><input type="radio" name="q1" value="0" required> Confidencialidad</label><br>
+                        <label><input type="radio" name="q1" value="1"> Integridad</label><br>
+                        <label><input type="radio" name="q1" value="0"> Disponibilidad</label>
+                    </div>
+
+                    <div class="question-block">
+                        <p><strong>2. Según el laboratorio, ¿cuál fue el puerto de destino del paquete capturado?</strong></p>
+                        <label><input type="radio" name="q2" value="0" required> 12345</label><br>
+                        <label><input type="radio" name="q2" value="0"> 443</label><br>
+                        <label><input type="radio" name="q2" value="1"> 80</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="margin-top: 20px;">Enviar Respuestas</button>
+                </form>
+
+                <div id="examResult" class="exam-result" style="display: none;">
+                    </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
